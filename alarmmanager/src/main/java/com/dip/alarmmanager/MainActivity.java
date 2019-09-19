@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
             interval = Integer.parseInt(text.getText().toString());
         Intent intent = new Intent(this, MyBroadcastReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                this.getApplicationContext(), 234324243, intent, 0);
+                this.getApplicationContext(), 234324244, intent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         Toast.makeText(this, "Alarm set in " + interval + " seconds",Toast.LENGTH_LONG).show();
         alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                SystemClock.elapsedRealtime() + (interval * 1000),
-                (interval * 1000), pendingIntent);
+                SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_HALF_DAY,
+                AlarmManager.INTERVAL_HALF_DAY, pendingIntent);
     }
 }
