@@ -5,14 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
- import com.dip.alarmmanager.MainActivity;
-import java.util.ArrayList;
+ import com.dip.alarmmanager.AlarmMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),itemAtPosition,Toast.LENGTH_LONG).show();
                 if(itemAtPosition.equals("Alarm Manager")){
 
-                     Intent launchIntent = new Intent(view.getContext(), com.dip.alarmmanager.MainActivity.class);
-                  //  launchIntent.setClassName("com.dip.alarmmanager", "MainActivity");
+                     Intent launchIntent = new Intent(view.getContext(), AlarmMainActivity.class);
+                  //  launchIntent.setClassName("com.dip.alarmmanager", "AlarmMainActivity");
                     startActivity(launchIntent);
-//                    Intent intent = new Intent(getCallingActivity() ,com.dip.alarmmanager.MainActivity.class);
-                  //  Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.dip.alarmmanager.MainActivity");
+//                    Intent intent = new Intent(getCallingActivity() ,com.dip.alarmmanager.AlarmMainActivity.class);
+                  //  Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.dip.alarmmanager.AlarmMainActivity");
                   /*  if (launchIntent != null) {
                         startActivity(launchIntent);//null pointer check in case package name was not found
                     }*/
