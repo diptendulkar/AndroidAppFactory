@@ -17,7 +17,7 @@ public class AlarmMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.alarm_activity_main);
         start= findViewById(R.id.alarmbutton);
         repeat= findViewById(R.id.repeatalarm);
 
