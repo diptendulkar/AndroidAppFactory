@@ -9,7 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
- import com.dip.alarmmanager.AlarmMainActivity;
+import com.dip.alarmmanager.AlarmMainActivity;
+import com.dip.profilepicture.ProfileActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,21 +33,16 @@ public class MainActivity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String itemAtPosition  = (String)parent.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(),itemAtPosition,Toast.LENGTH_LONG).show();
-                if(itemAtPosition.equals("Alarm Manager")){
+                String itemAtPosition = (String) parent.getItemAtPosition(position);
+                Toast.makeText(getApplicationContext(), itemAtPosition, Toast.LENGTH_LONG).show();
+                if (itemAtPosition.equals("Alarm Manager")) {
 
-                     Intent launchIntent = new Intent(view.getContext(), AlarmMainActivity.class);
-                  //  launchIntent.setClassName("com.dip.alarmmanager", "AlarmMainActivity");
+                    Intent launchIntent = new Intent(view.getContext(), AlarmMainActivity.class);
                     startActivity(launchIntent);
-//                    Intent intent = new Intent(getCallingActivity() ,com.dip.alarmmanager.AlarmMainActivity.class);
-                  //  Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.dip.alarmmanager.AlarmMainActivity");
-                  /*  if (launchIntent != null) {
-                        startActivity(launchIntent);//null pointer check in case package name was not found
-                    }*/
-                }
-                else if(itemAtPosition.equals("Profile Photo")){
 
+                } else if (itemAtPosition.equals("Profile Photo")) {
+                    Intent launchIntent = new Intent(view.getContext(), ProfileActivity.class);
+                    startActivity(launchIntent);
                 }
             }
         });
