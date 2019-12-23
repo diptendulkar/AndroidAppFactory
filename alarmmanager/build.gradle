@@ -1,11 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
 
 
     defaultConfig {
-        applicationId "com.dip.alarmmanager"
+
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -18,6 +18,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+
         }
     }
 

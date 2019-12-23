@@ -12,13 +12,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class AlarmMainActivity extends AppCompatActivity {
     Button start, repeat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        start= findViewById(R.id.button);
+        start= findViewById(R.id.alarmbutton);
         repeat= findViewById(R.id.repeatalarm);
 
         start.setOnClickListener(new View.OnClickListener() {
