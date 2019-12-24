@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
@@ -6,8 +6,8 @@ android {
 
 
     defaultConfig {
-        applicationId "com.dip.daynighttheme"
-        minSdkVersion 15
+
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -19,6 +19,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+
+        }
+        compileOptions {
+            sourceCompatibility = 1.8
+            targetCompatibility = 1.8
         }
     }
 

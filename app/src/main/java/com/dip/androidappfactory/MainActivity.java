@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import com.dip.alarmmanager.AlarmMainActivity;
 import com.dip.profilepicture.ProfileActivity;
+import com.dip.daynighttheme.DayNightMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         final ListView listview = (ListView) findViewById(R.id.listview);
 
         /*Add all Modules here*/
-        String[] values = new String[] { "Alarm Manager" ,"Profile Photo"  };
+        String[] values = new String[] { "Alarm Manager" ,"Profile Photo", "Day Night Theme"  };
 
        /* final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -42,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (itemAtPosition.equals("Profile Photo")) {
                     Intent launchIntent = new Intent(view.getContext(), ProfileActivity.class);
+                    startActivity(launchIntent);
+                }
+                else if (itemAtPosition.equals("Day Night Theme")) {
+                    Intent launchIntent = new Intent(view.getContext(), DayNightMainActivity.class);
                     startActivity(launchIntent);
                 }
             }

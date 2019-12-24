@@ -3,7 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="daynight_textColor" tools:ignore="MissingDefaultResource">#111111</color>
+    <color name="daynight_textColor" tools:ignore="MissingDefaultResource">#FFFFFF</color>
     <color name="daynight_textColor1" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+
 
 </resources>
