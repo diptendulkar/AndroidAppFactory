@@ -34,7 +34,7 @@
             android:layout_centerHorizontal="true"
             android:paddingRight="8dp"
             android:text="Night Mode"
-            android:textColor="FFdddd" />
+            android:textColor="#FFdddd" />
 
 
         <androidx.appcompat.widget.SwitchCompat
@@ -55,5 +55,5 @@
             android:layout_alignLeft="@+id/txtNightMode"
             android:layout_alignStart="@+id/txtNightMode"
             android:text="CLICK ME"
-            android:textColor="FFFb1b" />
+            android:textColor="#FFFb1b" />
     </RelativeLayout>
