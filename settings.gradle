@@ -1,2 +1,2 @@
-include ':app', ':alarmmanager', ':profilepicture'
+include ':app', ':alarmmanager', ':profilepicture', ':daynighttheme'
 rootProject.name='AndroidAppFactory'

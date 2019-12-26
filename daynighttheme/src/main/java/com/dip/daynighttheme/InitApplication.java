@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 public class InitApplication extends Application {
     public static final String NIGHT_MODE = "NIGHT_MODE";
     private boolean isNightModeEnabled = false;
+    SharedPreferences mPrefs;
 
     private static InitApplication singleton = null;
 
@@ -24,7 +25,8 @@ public class InitApplication extends Application {
     public void onCreate() {
         super.onCreate();
         singleton = this;
-        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+       // mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mPrefs = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         this.isNightModeEnabled = mPrefs.getBoolean(NIGHT_MODE, false);
     }
 
@@ -36,9 +38,11 @@ public class InitApplication extends Application {
         this.isNightModeEnabled = isNightModeEnabled;
 
         //TODO App Crash Here
-       /*SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = mPrefs.edit();
-        editor.putBoolean(NIGHT_MODE, isNightModeEnabled);
-        editor.apply();*/
+//        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if(mPrefs!=null) {
+            SharedPreferences.Editor editor = mPrefs.edit();
+            editor.putBoolean(NIGHT_MODE, isNightModeEnabled);
+            editor.apply();
+        }
     }
 }

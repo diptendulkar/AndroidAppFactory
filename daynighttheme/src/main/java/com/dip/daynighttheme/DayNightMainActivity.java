@@ -47,15 +47,17 @@ public class DayNightMainActivity extends AppCompatActivity {
                     InitApplication.getInstance().setIsNightModeEnabled(true);
                     Intent intent = getIntent();
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    finish();
-                    startActivity(intent);
+                   // finish();
+                   // startActivity(intent);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
                 } else {
                     InitApplication.getInstance().setIsNightModeEnabled(false);
                     Intent intent = getIntent();
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    finish();
-                    startActivity(intent);
+                   // finish();
+                   // startActivity(intent);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 }
 
 
