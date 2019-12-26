@@ -21,7 +21,8 @@ public class DayNightMainActivity extends AppCompatActivity {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-        setContentView(R.layout.activity_day_night_main);
+
+        setContentView(R.layout.activity_daynight);
 
 
         SwitchCompat switchCompat = findViewById(R.id.switchCompat);

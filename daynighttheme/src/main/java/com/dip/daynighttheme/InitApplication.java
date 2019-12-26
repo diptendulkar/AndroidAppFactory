@@ -35,9 +35,10 @@ public class InitApplication extends Application {
     public void setIsNightModeEnabled(boolean isNightModeEnabled) {
         this.isNightModeEnabled = isNightModeEnabled;
 
-        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //TODO App Crash Here
+       /*SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = mPrefs.edit();
         editor.putBoolean(NIGHT_MODE, isNightModeEnabled);
-        editor.apply();
+        editor.apply();*/
     }
 }

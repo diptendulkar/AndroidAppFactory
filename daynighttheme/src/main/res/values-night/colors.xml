@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="daynight_textColor" tools:ignore="MissingDefaultResource">#FFFFFF</color>
-    <color name="daynight_textColor1" tools:ignore="MissingDefaultResource">#FFFFFF</color>
-
-
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="orange">#ff8200</color>
+    <color name="orangeDark">#f77000</color>
+    <color name="daynight_textColor">#ff8222</color>
+    <color name="switchColor">#BC2F1D</color>
 </resources>
