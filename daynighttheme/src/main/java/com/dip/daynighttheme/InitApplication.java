@@ -25,8 +25,7 @@ public class InitApplication extends Application {
     public void onCreate() {
         super.onCreate();
         singleton = this;
-       // mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mPrefs = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         this.isNightModeEnabled = mPrefs.getBoolean(NIGHT_MODE, false);
     }
 
@@ -37,12 +36,9 @@ public class InitApplication extends Application {
     public void setIsNightModeEnabled(boolean isNightModeEnabled) {
         this.isNightModeEnabled = isNightModeEnabled;
 
-        //TODO App Crash Here
-//        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if(mPrefs!=null) {
-            SharedPreferences.Editor editor = mPrefs.edit();
-            editor.putBoolean(NIGHT_MODE, isNightModeEnabled);
-            editor.apply();
-        }
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = mPrefs.edit();
+        editor.putBoolean(NIGHT_MODE, isNightModeEnabled);
+        editor.apply();
     }
 }
